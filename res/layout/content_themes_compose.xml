@@ -215,7 +215,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
             </LinearLayout>
         </LinearLayout>
 
-        <LinearLayout
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center_vertical"
@@ -230,9 +230,13 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:paddingStart="10dp"
+                android:paddingStart="10dp"	
+				        android:paddingRight="4.0dip"
                 android:maxLines="2"
-                android:text="@string/notification_overlay_info"/>
+                android:text="@string/notification_overlay_info"
+				        android:layout_toStartOf="@id/overlay_apply"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="22dip"/>
 
             <Space
                 android:layout_width="0dp"
@@ -247,8 +251,10 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
                 android:paddingEnd="5dp"
                 android:background="?android:attr/colorAccent"
                 android:textColor="?android:attr/colorPrimary"
-                android:text="@string/button_apply"/>
-        </LinearLayout>
+                android:text="@string/button_apply"
+				        android:layout_alignParentEnd="true"
+                android:layout_gravity="bottom"/>
+        </RelativeLayout>
     </LinearLayout>
 
     <ProgressBar
